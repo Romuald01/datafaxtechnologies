@@ -1,0 +1,300 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: linear-gradient();
+  font-family: "Nunito", sans-serif;
+  font-weight: 400;
+  height: 100vh;
+  background-image: linear-gradient(
+    to top left,
+    rgb(143, 217, 242) 0%,
+    rgb(63, 63, 151) 100%
+  );
+  justify-content: center;
+  align-items: center;
+}
+.hamburger {
+  display: none;
+}
+
+marquee {
+  margin: 3px 3px;
+}
+
+.company-logo-div img {
+  height: 100px;
+}
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.menu ul li {
+  display: inline;
+  padding: 10px;
+  margin: 10px;
+}
+.menu ul li a {
+  text-transform: capitalize;
+  font-size: 24px;
+  color: rgb(63, 63, 149);
+  text-decoration: none;
+}
+.menu ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.menu ul li:hover {
+  background-color: rgb(63, 63, 149);
+  color: red;
+  border-radius: 20px;
+  padding: 10px;
+}
+.welcome-message {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+ol {
+  padding: 10px;
+}
+.section-top-desktop-1 {
+  background-image: url("../images/bg-section-top-desktop-1.svg");
+}
+.section-top-desktop-2 {
+  background-image: url("../images/bg-section-bottom-desktop-1.svg");
+}
+.bg-footer-top-desktop {
+  background-image: url("../images/bg-footer-top-desktop.svg");
+}
+.section-top-desktop-1,
+.section-top-desktop-2,
+.bg-footer-top-desktop {
+  height: 200px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.section-top-desktop-1 {
+  margin-bottom: -40px;
+}
+.vision-text,
+.mission-text,
+.work-sample-text {
+  text-align: center;
+}
+.mission-paragraph,
+.vision-paragraph,
+.our-mind p,
+.training ol li,
+.services ol li {
+  font-size: 24px;
+}
+.mission-vision,
+.our-mind {
+  background-color: rgb(63, 63, 149);
+}
+.carousel-item img {
+  height: 70vh;
+}
+
+.register-heading {
+  text-align: center;
+  font-weight: 600;
+}
+.training-form-div {
+  justify-content: flex;
+}
+
+.training-form-div form input {
+  padding: 10px;
+  border-radius: 20px;
+  width: 100%;
+}
+.training-form-div form button {
+  width: 100%;
+  border-radius: 20px;
+  padding: 20px;
+  font-weight: 700;
+  font-size: 18px;
+}
+.training-form-div form button:hover {
+  background-color: rgb(63, 63, 149);
+  color: #fff;
+}
+label {
+  text-transform: capitalize;
+  font-size: 24px;
+  display: block;
+}
+select {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50px;
+  display: flex;
+  width: 100%;
+}
+textarea {
+  width: 100%;
+  border-radius: 50px;
+}
+.address {
+  color: #fff;
+  font-size: 24px;
+  margin-left: 10px;
+}
+.social-media-icon img {
+  height: 20px;
+  margin-left: 10px;
+}
+.fab {
+  font-size: 24px;
+  color: #fff;
+  padding: 10px;
+}
+.fab a,
+.social-media-icon a {
+  color: #fff;
+  cursor: pointer;
+}
+.social-media-icon a {
+  font-size: 24px;
+}
+.footer {
+  background-color: rgb(63, 63, 149);
+}
+.bg-footer-top-desktop {
+  margin-bottom: -70px;
+}
+/* **************MEDIA QUERY******************************* */
+@media screen and (max-width: 768px) {
+  .bg-footer-top-desktop {
+    margin-bottom: -116px;
+  }
+  .mission-paragraph,
+  .vision-paragraph,
+  .our-mind p {
+    font-size: 20px;
+    text-align: center;
+  }
+  ol li {
+    font-size: 20px;
+  }
+  .training,
+  .services {
+    font-size: 24px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu-list-overlay {
+    background-color: rgb(63, 63, 149);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    height: 200px;
+  }
+  .hidden {
+    display: none;
+  }
+  .menu-list-overlay ul li {
+    padding: 10px;
+    color: #fff;
+  }
+  .company-logo-div img {
+    height: 60px;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 30px;
+    top: -45px;
+    width: 40px;
+    height: 30px;
+  }
+  .menu-list {
+    /* display: block; */
+  }
+
+  .section-top-desktop-1 {
+    margin-bottom: -112px;
+  }
+
+  .work-description {
+    margin-top: -50px;
+  }
+  .bg-footer-top-desktop {
+    margin-top: 50px;
+  }
+}
+@media screen and (max-width: 425px) {
+  .company-logo-div img {
+    /* height: 60px; */
+  }
+  .header {
+    margin-top: -30px;
+  }
+  .hamburger {
+    /* right: -180px; */
+  }
+  .section-top-desktop-1 {
+    margin-bottom: -151px;
+  }
+  .register-heading {
+    font-size: 24px;
+  }
+  .training ol li,
+  .services ol li {
+    font-size: 30px;
+  }
+  .training-form-div form label {
+    font-size: 20px;
+  }
+  .bg-footer-top-desktop {
+    margin-bottom: -153px;
+  }
+
+  .social-media-icon a,
+  .address {
+    font-size: 24px;
+  }
+  .mission-paragraph,
+  .vision-paragraph,
+  .our-mind p,
+  .address {
+    font-size: 18px;
+  }
+
+  .work-description {
+    margin-top: -100px;
+  }
+}
+@media screen and (max-width: 375px) {
+  .section-top-desktop-1 {
+    margin-bottom: -165px;
+  }
+  .social-media-icon a {
+    font-size: 20px;
+  }
+  ol li {
+    font-size: 18px;
+  }
+  .work-sample-text {
+    font-size: 30px;
+  }
+  .bg-footer-top-desktop {
+    margin-bottom: -160px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .social-media-icon a {
+    font-size: 19px;
+  }
+  .bg-footer-top-desktop {
+    margin-bottom: -165px;
+  }
+}
