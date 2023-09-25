@@ -24,6 +24,7 @@ body {
 
 marquee {
   margin: 3px 3px;
+  color: #fff;
 }
 
 .company-logo-div img {
