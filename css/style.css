@@ -189,9 +189,6 @@ textarea {
   }
 }
 @media screen and (max-width: 768px) {
-  .menu {
-    /* display: none; */
-  }
   .bg-footer-top-desktop {
     margin-bottom: -116px;
   }
