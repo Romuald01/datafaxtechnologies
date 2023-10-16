@@ -4,7 +4,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.hidden {
+  display: none;
+}
 .student-img {
   height: 100px;
 }
@@ -191,15 +193,19 @@ textarea {
 }
 
 /*start here student page styling */
-.student-img {
+.testifier-img {
   height: 100px;
-  /* width: 150px; */
+  width: 150px;
   border-radius: 15%;
   border: 5px dotted blue;
 }
 .testimony-div {
   text-align: center;
   justify-content: center;
+  border: 2px solid red;
+  height: 300px;
+  width: 450px;
+  display: inline-block;
 }
 .testimony-content {
   border: 2px solid red;
@@ -218,11 +224,11 @@ textarea {
   padding: 0;
   margin: 0;
 }
-.experience-heading-div {
+.testimony-buttons {
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  margin: 10px;
+  margin-top: 50px;
 }
 .experience-paragraph {
   text-align: center;
@@ -244,6 +250,7 @@ textarea {
   border-radius: 10px;
   font-size: 20px;
   border: none;
+  cursor: pointer;
 }
 .testimony-buttons button:hover {
   background-color: rgb(63, 63, 149);
@@ -253,61 +260,47 @@ textarea {
 .close-experience-button {
   font-size: 36px;
 }
+
+/*modal styling code start here  */
+.modal {
+  position: absolute;
+  background-color: #fff;
+  width: 70%;
+  border-radius: 5px;
+  padding: 6rem;
+  height: 100px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}
+.modal h1 {
+  position: absolute;
+  top: 2rem;
+}
+.modal {
+  font-weight: 400;
+  font-size: 18px;
+}
 .overlay {
-  width: 100%;
-  height: 100%;
+  position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
+  z-index: 5;
 }
-/*modal styling code start here  */
-/* 
-body {
-  font-family: sans-serif;
-  color: #333;
-  line-height: 1.5;
-  height: 100vh;
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  background: linear-gradient(to top left, #28b487, #7dd56f);
-}
-
-.show-modal {
-  font-size: 2rem;
-  font-weight: 600;
-  padding: 1.75rem 3.5rem;
-  margin: 5rem 2rem;
-  border: none;
-  background-color: #fff;
-  color: #444;
-  border-radius: 10rem;
-  cursor: pointer;
-}
-
 .close-modal {
+  font-size: 36px;
   position: absolute;
-  top: 1.2rem;
   right: 2rem;
-  font-size: 5rem;
-  color: #333;
+  top: 1.2rem;
   cursor: pointer;
   border: none;
   background: none;
 }
-
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-}
-
-p {
-  font-size: 1.8rem;
-} */
-
-/* -------------------------- */
 
 /*ends student page styling */
 /* **************MEDIA QUERY******************************* */
@@ -345,6 +338,19 @@ p {
   textarea {
     height: 100px;
   }
+  .testimony-div {
+    width: 100%;
+  }
+  .modal {
+    padding: 5rem;
+    height: 250px;
+  }
+  .student-name {
+    font-size: 24px;
+  }
+  .ability_text {
+    font-size: 18px;
+  }
 }
 @media screen and (max-width: 767px) {
   .close-hamburger {
@@ -363,9 +369,6 @@ p {
     margin-top: -60px;
   }
 
-  .hidden {
-    display: none;
-  }
   .menu-list ul li a {
     color: red;
     display: block;
@@ -402,8 +405,23 @@ p {
   .bg-footer-top-desktop {
     margin-top: 50px;
   }
+  .modal {
+    padding: 5rem;
+  }
 }
 @media screen and (max-width: 425px) {
+  .modal {
+    padding: 3rem;
+    height: 300px;
+  }
+  .student-name {
+    font-size: 20px;
+    width: 180px;
+  }
+  .ability_text {
+    font-size: 16px;
+    padding-top: 35px;
+  }
   .close-hamburger {
     margin-top: 20px;
   }
@@ -474,6 +492,21 @@ p {
   }
 }
 @media screen and (max-width: 320px) {
+  .modal {
+    padding: 1rem;
+    height: 300px;
+  }
+  .student-name {
+    font-size: 20px;
+    width: 160px;
+  }
+  .ability_text {
+    font-size: 16px;
+    padding-top: 60px;
+  }
+  .close-modal {
+    right: 1rem;
+  }
   .social-media-icon a {
     font-size: 19px;
   }
