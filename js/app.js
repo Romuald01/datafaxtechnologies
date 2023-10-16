@@ -10,6 +10,7 @@ const modal = document.querySelector(".modal");
 const closeModal = document.querySelector(".close-modal");
 const overlay = document.querySelector(".overlay");
 modal.classList.add("hidden");
+// menu.classList.add("hidden");
 
 for (let i = 0; i < abilityBtn.length; i++)
   abilityBtn[i].addEventListener("click", function () {
