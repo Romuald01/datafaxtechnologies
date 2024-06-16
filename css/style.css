@@ -38,7 +38,7 @@ marquee {
 }
 .menu {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   text-align: center;
 }
@@ -58,7 +58,7 @@ marquee {
   color: #fff;
 }
 .close-hamburger {
-  display: none;
+  /* display: none; */
 }
 .menu ul li:hover {
   background-color: rgb(63, 63, 149);
@@ -66,6 +66,7 @@ marquee {
   border-radius: 20px;
   padding: 10px;
 }
+
 .welcome-message {
   font-size: 1.5rem;
   font-weight: 600;
@@ -204,8 +205,9 @@ textarea {
   justify-content: center;
   border: 2px solid red;
   height: 300px;
-  width: 450px;
+  width: 405px;
   display: inline-block;
+  margin-top: 10px;
 }
 .testimony-content {
   border: 2px solid red;
@@ -262,7 +264,8 @@ textarea {
 }
 
 /*modal styling code start here  */
-.modal {
+.modal,
+.expmodal {
   position: absolute;
   background-color: #fff;
   width: 70%;
@@ -274,11 +277,13 @@ textarea {
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-.modal h1 {
+.modal h1,
+.expmodal h1 {
   position: absolute;
   top: 2rem;
 }
-.modal {
+.modal,
+.expmodal {
   font-weight: 400;
   font-size: 18px;
 }
@@ -313,7 +318,7 @@ textarea {
   .menu-list img {
     position: absolute;
     right: 30px;
-    border: 3px solid green;
+    /* border: 3px solid green; */
   }
   .bg-footer-top-desktop {
     margin-bottom: -116px;
@@ -341,7 +346,8 @@ textarea {
   .testimony-div {
     width: 100%;
   }
-  .modal {
+  .modal,
+  .expmodal {
     padding: 5rem;
     height: 250px;
   }
@@ -353,16 +359,17 @@ textarea {
   }
 }
 @media screen and (max-width: 767px) {
-  .close-hamburger {
-    display: block;
-  }
   .menu-list {
     background-color: rgb(143, 217, 242);
     font-size: 18px;
     font-weight: 600;
-    width: 100%;
-    margin-top: -60px;
+    width: 100% !important;
+    border: 1px solid red;
+    position: absolute;
+    left: 0;
+    top: 0;
     z-index: 1;
+
   }
 
   .close-button {
@@ -372,7 +379,7 @@ textarea {
   .menu-list ul li a {
     color: red;
     display: block;
-    margin-left: -500px;
+    /* width: 100%; */
     text-align: none;
   }
 
@@ -380,19 +387,29 @@ textarea {
     position: absolute;
     right: 60px;
     top: 30px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
     height: 30px;
+  }
+  .company-logo-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+    ;
   }
   .company-logo-div img {
     height: 60px;
   }
   .hamburger {
     display: block;
-    position: absolute;
+    /* position: absolute;
     right: 30px;
-    top: -45px;
+    top: 90px; */
     width: 40px;
-    height: 30px;
+    height: 30px !important;
+    /* border: 1px solid red; */
+  }
+  .close-hamburger{
+    /* border: 1px solid red; */
   }
 
   .section-top-desktop-1 {
@@ -405,12 +422,14 @@ textarea {
   .bg-footer-top-desktop {
     margin-top: 50px;
   }
-  .modal {
+  .modal,
+  .expmodal {
     padding: 5rem;
   }
 }
 @media screen and (max-width: 425px) {
-  .modal {
+  .modal,
+  .expmodal {
     padding: 3rem;
     height: 300px;
   }
@@ -423,7 +442,7 @@ textarea {
     padding-top: 35px;
   }
   .close-hamburger {
-    margin-top: 20px;
+
   }
   .company-logo-div img {
     height: 50px;
@@ -492,7 +511,8 @@ textarea {
   }
 }
 @media screen and (max-width: 320px) {
-  .modal {
+  .modal,
+  .expmodal {
     padding: 1rem;
     height: 300px;
   }
